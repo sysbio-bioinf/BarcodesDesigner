@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.awt.TextField?>
+<?import main.code.ui.controls.IntegerField ?>
+<?import main.code.ui.controls.BarcodePatternField ?>
+
+<GridPane fx:id="contentPane" xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/16"
+          fx:controller="main.code.controller.BarcodeGenerationController" vgap="10">
+  <columnConstraints>
+    <ColumnConstraints percentWidth="70" halignment="LEFT" />
+    <ColumnConstraints percentWidth="30" halignment="RIGHT" />
+  </columnConstraints>
+   <children>
+       <Label text="Barcode length:" GridPane.rowIndex="0"/>
+       <Label text="Number of barcodes:" GridPane.rowIndex="1"/>
+       <Label text="Barcode pattern:" GridPane.rowIndex="2"/>
+       <Label text="G/C percentage" GridPane.rowIndex="3"/>
+       <GridPane fx:id="gcRangeGrid" hgap="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3" alignment="BASELINE_RIGHT">
+         <children>
+             <Label text="-" GridPane.columnIndex="1"/>
+             <Label fx:id="percentageLabel" GridPane.columnIndex="3"/>
+         </children>
+      </GridPane>
+       <CheckBox fx:id="hammingCodeCheckBox" text="Initialize with Hamming codes" wrapText="true"
+                 GridPane.rowIndex="4" selected="true"/>
+   </children>
+</GridPane>

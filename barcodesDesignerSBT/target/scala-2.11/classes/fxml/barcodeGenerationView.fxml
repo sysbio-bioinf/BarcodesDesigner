@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="contentPane" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="main.code.controller.BarcodeGenerationController" stylesheets="@../css/darkMode/pages.css">
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" percentWidth="70" />
+        <ColumnConstraints halignment="RIGHT" percentWidth="30" />
+    </columnConstraints>
+    <Label text="Barcode length:" GridPane.rowIndex="0" />
+    <Label text="Number of barcodes:" GridPane.rowIndex="1" />
+    <Label text="Barcode pattern:" GridPane.rowIndex="2" />
+    <Label text="G/C percentage" GridPane.rowIndex="3" />
+    <GridPane fx:id="gcRangeGrid" alignment="BASELINE_RIGHT" hgap="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <Label text="-" GridPane.columnIndex="1" />
+        <Label fx:id="percentageLabel" GridPane.columnIndex="3" />
+    </GridPane>
+    <CheckBox fx:id="hammingCodeCheckBox" selected="true" text="Initialize with Hamming codes" wrapText="true" GridPane.rowIndex="4" />
+   <ChoiceBox prefWidth="150.0" GridPane.rowIndex="5" value="Levenshtein distance" fx:id="distanceMetricChoiceBox"/>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+</GridPane>

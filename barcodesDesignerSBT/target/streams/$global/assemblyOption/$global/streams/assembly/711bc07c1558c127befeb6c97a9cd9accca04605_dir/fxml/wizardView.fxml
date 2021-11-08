@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="mainWizardPane" vgap="5" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="main.code.controller.WizardController">
+  <children>
+      <Label fx:id="descriptionLabel" wrapText="true" />
+      <AnchorPane fx:id="contentPane" GridPane.rowIndex="1" />
+      <Separator GridPane.rowIndex="2"/>
+      <GridPane fx:id="bottomPane" GridPane.rowIndex="3" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+          <columnConstraints>
+              <ColumnConstraints halignment="LEFT" percentWidth="50" />
+              <ColumnConstraints halignment="RIGHT" percentWidth="50" />
+          </columnConstraints>
+          <children>
+              <Label fx:id="infoLabel" text="About Barcode Designer" textFill="#1561d4">
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </Label>
+              <HBox alignment="CENTER_RIGHT" spacing="5.0" GridPane.columnIndex="1">
+                  <children>
+                      <Button fx:id="prevButton" disable="true" mnemonicParsing="false" prefWidth="80.0" text="Previous" />
+                      <Button fx:id="nextButton" defaultButton="true" disable="true" mnemonicParsing="false"
+                              prefWidth="80.0" text="Next" />
+                      <Button fx:id="cancelButton" mnemonicParsing="false" prefWidth="80.0" text="Cancel" />
+                  </children>
+              </HBox>
+          </children>
+      </GridPane>
+  </children>
+   <opaqueInsets>
+      <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+   </opaqueInsets>
+   <rowConstraints>
+      <RowConstraints percentHeight="20.0" valignment="TOP" />
+      <RowConstraints percentHeight="70.0" valignment="TOP" />
+      <RowConstraints />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints halignment="LEFT" percentWidth="100" />
+   </columnConstraints>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>

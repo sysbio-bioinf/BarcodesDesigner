@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<GridPane vgap="10.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="main.code.controller.InfoWindowController" fx:id="mainGrid">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="100" halignment="LEFT"/>
+    </columnConstraints>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label fx:id="infoLabel" text="tst" minHeight="170" mouseTransparent="true"/>
+        <HBox fx:id="logoRegion" alignment="BOTTOM_CENTER" GridPane.rowIndex="1">
+            <ImageView fx:id="logoView" mouseTransparent="true"/>
+        </HBox>
+    </children>
+</GridPane>

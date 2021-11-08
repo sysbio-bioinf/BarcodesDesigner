@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="contentPane" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/16"
+          fx:controller="main.code.controller.ResultController">
+  <columnConstraints>
+    <ColumnConstraints percentWidth="100" halignment="CENTER"/>
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints percentHeight="100" valignment="CENTER" />
+  </rowConstraints>
+   <children>
+      <TreeView fx:id="resultTree" prefHeight="200.0" prefWidth="200.0" showRoot="false" />
+   </children>
+</GridPane>
