@@ -49,7 +49,7 @@ Optional parameters are:
 ```zsh
 $ java -cp barcodesDesigner_v1.0.jar main.code.commandLineUse.CommandLineMain --type "generate"
    [-nbarcodes, -nb] [-length, -l] [-pattern, -p] [-gcmin] [-gcmax] 
-   [-hamming={true|false}, -h={true|false}] [-mindist, -md] 
+   [-hamming, -h] [-mindist, -md] 
    [-popsize, -ps] [-niter, -ni] [-nrun, -nr]
    [-outtype={"text"|"json"}, -ot={"text"|"json"}] [-outputfile=<file2>, -of=<file2>]
    [-distMetric={"hamming"|"levenshtein"}, -dm={"hamming"|"levenshtein"}] [-parallel, -par]
@@ -265,7 +265,7 @@ $ Error: Unknown argument: -lengthOfBarcode
 --> This parameter you added (here ```-lengthOfBarcode```) does not exist.
 ## Parameters
 ### Barcode Generation
-- _Barcode length:_ The length of the generated barcodes (values: 1-1000; default: 12; integer)
+- _Barcode length:_ The length of the generated barcodes (values: 1-1000; default: 10; integer)
 - _Number of barcodes:_ The size of the barcode set (values: 2-1000000; default: 100; integer)
 - _Barcode pattern:_ A user-defined pattern specifying fixed and free nucleotide positions (must match: ```[ACGT_]{length}```)
 - _G/C-percentage:_ The range of allowed GC content of each barcode (note: specify 60 instead of 0.6 for 60%; values: 0-100 (minGC <= maxGC); default: 40 (minGC) - 60 (maxGC); integer)
